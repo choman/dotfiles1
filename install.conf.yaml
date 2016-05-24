@@ -10,7 +10,6 @@
 
 - link:
     ~/.bash_aliases: bash_aliases
-    ~/.local/bin/bashmarks.sh: bashmarks/bashmarks.sh
     ~/.bash_profile: bash_profile
     ~/.bashrc: bashrc
     ~/.bash-git-prompt: bash-git-prompt
@@ -21,5 +20,8 @@
 - shell:
   - ["git submodule update --init --recursive", "installing/updating submodules"]
   - mkdir -p ~/.rtorrent/session ~/.rtorrent/watch ~/.rtorrent/downloads
-  - ["sed -i -e 's/function l /function lb /' bashmarks/bashmarks.sh", "Updating bashmarks"]
+  - ["cp bashmarks/bashmarks.sh mybashmarks.sh", "Creating bashmarks"]
+  - ["sed -i -e 's/function l /function lb /' mybashmarks.sh", "Updating bashmarks"]
 
+- link:
+    ~/.local/bin/bashmarks.sh: mybashmarks.sh
