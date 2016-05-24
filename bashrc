@@ -153,4 +153,13 @@ transfer() {
    GIT_PROMPT_THEME=Single_line_Ubuntu
    source ~/.bash-git-prompt/gitprompt.sh
 
+export GOROOT=$HOME/go
+export PATH=$PATH:$GOROOT/bin
+export GOPATH=$HOME/go-programs
+export PATH="$PATH:$GOPATH/bin"
+
+[[ -s "/home/choman/.gvm/scripts/gvm" ]] && source "/home/choman/.gvm/scripts/gvm"
+[ -r /home/choman/.byobu/prompt ] && . /home/choman/.byobu/prompt   #byobu-prompt#
+[[ -d "/home/choman/.dotfiles/bin" ]]  && PATH="$PATH:/home/choman/.dotfiles/bin"
+
 source ~/.local/bin/bashmarks.sh
