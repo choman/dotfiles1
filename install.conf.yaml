@@ -7,6 +7,7 @@
 
 - shell:
   - mkdir -p ~/.local/bin
+  - mkdir -p ~/.ssh/sockets
 
 - link:
     ~/.bash_aliases: bash_aliases
@@ -16,14 +17,16 @@
     ~/.gitcheck: gitcheck
     ~/.gitconfig: gitconfig
     ~/.gitignore_global: gitignore_global
-    ~/.tmux.conf: tmux.conf
     ~/.sdirs: SDIRS
+    ~/.ssh/config: ssh/config
+    ~/.tmux.conf: tmux.conf
 
 - shell:
   - ["git submodule update --init --recursive", "installing/updating submodules"]
   - mkdir -p ~/.rtorrent/session ~/.rtorrent/watch ~/.rtorrent/downloads
   - ["cp bashmarks/bashmarks.sh mybashmarks.sh", "Creating bashmarks"]
   - ["sed -i -e 's/function l /function lb /' mybashmarks.sh", "Updating bashmarks"]
+  - ["chmod 600 ~/.ssh/config", "Security .ssh/config"]
 
 - link:
     ~/.local/bin/bashmarks.sh: mybashmarks.sh
