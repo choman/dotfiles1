@@ -10,9 +10,10 @@
 
 - link:
     ~/.bash_aliases: bash_aliases
+    ~/.bash-git-prompt: bash-git-prompt
     ~/.bash_profile: bash_profile
     ~/.bashrc: bashrc
-    ~/.bash-git-prompt: bash-git-prompt
+    ~/.gitcheck: gitcheck
     ~/.gitconfig: gitconfig
     ~/.gitignore_global: gitignore_global
     ~/.tmux.conf: tmux.conf
