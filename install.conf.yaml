@@ -5,8 +5,12 @@
 
 - clean: ['~', '~/.config']
 
+- shell:
+  - mkdir -p ~/.local/bin
+
 - link:
     ~/.bash_aliases: bash_aliases
+    ~/.local/bin/bashmarks.sh: bashmarks/bashmarks.sh
     ~/.bash_profile: bash_profile
     ~/.bashrc: bashrc
     ~/.bash-git-prompt: bash-git-prompt
@@ -15,6 +19,7 @@
     ~/.tmux.conf: tmux.conf
 
 - shell:
+  - ["git submodule update --init --recursive", "installing/updating submodules"]
   - mkdir -p ~/.rtorrent/session ~/.rtorrent/watch ~/.rtorrent/downloads
-  - ["git submodule update --init --recursive", "installing submodules"]
+  - ["sed -i -e 's/function l /function lb /' bashmarks/bashmarks.sh", "Updating bashmarks"]
 
