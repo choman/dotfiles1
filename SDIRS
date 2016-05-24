@@ -1,1 +1,2 @@
 export DIR_altclient="$HOME/Downloads/altclient"
+export DIR_downloads="$HOME/Downloads"

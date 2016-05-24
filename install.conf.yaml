@@ -17,6 +17,7 @@
     ~/.gitconfig: gitconfig
     ~/.gitignore_global: gitignore_global
     ~/.tmux.conf: tmux.conf
+    ~/.sdirs: SDIRS
 
 - shell:
   - ["git submodule update --init --recursive", "installing/updating submodules"]
