@@ -8,6 +8,7 @@
 - shell:
   - mkdir -p ~/.local/bin
   - mkdir -p ~/.ssh/sockets
+  - mkdir -p ~/bin
 
 - link:
     ~/.bash_aliases: bash_aliases
